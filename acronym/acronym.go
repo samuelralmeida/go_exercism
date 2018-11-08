@@ -1,11 +1,9 @@
 package acronym
 
 import (
-	"strings"
 	"unicode"
 )
 
-// Abbreviate should have a comment documenting it.
 func Abbreviate(s string) string {
 	var result string
 	for i, c := range s {
@@ -18,7 +16,5 @@ func Abbreviate(s string) string {
 			result = result + string(s[i+1])
 		}
 	}
-	result = strings.Replace(result, " ", "", -1)
-	result = strings.ToUpper(result)
 	return result
 }
